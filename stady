@@ -1,0 +1,226 @@
+package stady;
+
+import java.util.Scanner;
+
+
+
+public class Bancomat {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	menu();
+	
+	}
+
+	
+	
+	public static void menu() {
+		System.out.println("Make your choice");
+		System.out.println(1+ " - replenishment of mobile account");
+		System.out.println(2+ " - payment for utilities");
+		System.out.println(3+ " - games");
+		System.out.println(4+ " - GoodBay");
+		
+		while (true) {
+			int choice = newScanner();	
+				switch(choice) {
+			    case 1: 
+			    	mobileAccount();
+					break;
+				case 2: 
+					utilities();
+					break;
+				case 3: 
+					games();
+					break;
+				default: 
+				    System.out.println("Error");
+				    break;
+				 }   
+			}
+	}		
+				
+	
+		
+		
+			
+		
+	
+		public static void mobileAccount() {
+			System.out.println("Select a carrier");
+			System.out.println(1+ " - Vodafone");
+			System.out.println(2+ " - Київстар");
+			System.out.println(3+ " - Лайф");
+			System.out.println(4+ " return to the main menu");
+			while (true) {
+				int choice = newScanner();
+				
+				switch(choice) {
+			    case 1: 
+			    	number();
+			    	validetSum();
+			    	check();
+					break;
+				case 2: 
+					number();
+			    	validetSum();
+			    	check();
+					break;
+				case 3: 
+					number();
+			    	validetSum();
+			    	check();
+					break;
+				case 4: 
+					menu();
+					return;
+				default: 
+				    System.out.println("Error");
+				    break;
+				 }   
+		}
+					
+	
+		}
+	
+		public static void utilities() {
+			System.out.println("Select a utilities");
+			System.out.println(1+ " - Газ");
+			System.out.println(2+ " - Світло");
+			System.out.println(3+ " - Вода");
+			System.out.println(4+ " return to the main menu");
+			while (true) {
+				int choice = newScanner();
+				
+				switch(choice) {
+			    case 1: 
+			    	personalAccount();
+			    	validetSum();
+			    	check();
+					break;
+				case 2: 
+					personalAccount();
+			    	validetSum();
+			    	check();
+					break;
+				case 3: 
+					personalAccount();
+			    	validetSum();
+			    	check();
+					break;
+				case 4: 
+					menu();
+					return;
+				default: 
+				    System.out.println("Error");
+				    break;
+				 }   
+		}
+		
+		}
+		
+		public static void games() {
+			System.out.println("Select a  games");
+			System.out.println(1+ " - Word of tanks");
+			System.out.println(2+ " - Mario");
+			System.out.println(3+ " - Tetris");
+			System.out.println(4+ " return to the main menu");
+			while (true) {
+				int choice = newScanner();
+				
+				switch(choice) {
+			    case 1: 
+			    	personalAccount();
+			    	validetSum();
+			    	check();
+					break;
+				case 2: 
+					personalAccount();
+			    	validetSum();
+			    	check();
+					break;
+				case 3: 
+					personalAccount();
+			    	validetSum();
+			    	check();
+					break;
+				case 4: 
+					menu();
+					return;
+				default: 
+				    System.out.println("Error");
+				    break;
+				 }   
+		}
+			
+		}
+		
+		public static void number() {
+			System.out.println("please, enter the phone number +380");
+			int phoneNumber = newScanner();
+			while (phoneNumber<50000000) {
+				System.out.println("pleas, enter correct number");
+				 phoneNumber = newScanner();
+						
+					}
+					
+			}	
+		
+		public static void personalAccount() {
+			System.out.println("please, enter your account ");
+			int phoneNumber = newScanner();
+			while (phoneNumber<1) {
+				System.out.println("pleas, enter correct account");
+				 phoneNumber = newScanner();
+						
+					}
+					
+			}	
+			
+		
+			
+			public static void  validetSum() {
+			System.out.println("please, enter the amount needed");
+			int sum = newScanner();
+			while (sum>15000||sum==0) {
+						System.out.println("pleas, enter correct sum");
+						sum = newScanner();
+					}
+			
+			}
+				
+		
+		public static int  newScanner() {
+			Scanner cs = new Scanner(System.in);
+			int phoneNumber = cs.nextInt();
+			return phoneNumber;
+		}	
+		
+			public static void check() {
+			System.out.println("Y1our phone has been successfully recharged");
+			System.out.println("Do your want a chech?");
+			System.out.println(1+ " - yes");
+			System.out.println(2+ " - no");
+			int answer = newScanner();
+			switch(answer) {
+		    case 1: 
+		    	System.out.println("pleas, take your check");
+		    	System.out.println();
+		    	menu();
+				break;
+			case 2: 
+				System.out.println("thank you for protecting nature");
+				System.out.println();
+				menu();
+				break;
+			
+		}
+			
+} 
+}
+		
+		
+		
+		
+      
